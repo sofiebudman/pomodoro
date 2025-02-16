@@ -1,0 +1,20 @@
+body {
+    background-color: #ba4949;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    display: inline;
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+#start {
+    margin: 10px;
+}
