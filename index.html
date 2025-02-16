@@ -11,28 +11,42 @@
 
 
 <body>
-    <div class = "text-center">
-        <h1>Pomodoro</h1>
-        <h3>Sofie Budman</h3>
-       
-        <div id = "timeDiv">
-            <h1 id = "title1">Session Time</h1>
-            <a href = "#" class= "btn btn-secondary" id = "minus5Clock"> - </a>
-            
-            <h2 id = "num">5<h2>
-            <a href = "#" class = "btn btn-secondary" id = "add5Clock"> + </a>
-            <a href = "#" class = "btn btn-secondary" id = "reset"> Reset </a>
-        </div>
-        <div id = "break">
-            <h1 id = "title1">Break Time</h1>
-            <a href = "#" class= "btn btn-secondary" id = "minus5Break"> - </a>
-            
-            <h2 id = "breakNum">5<h2>
-            <a href = "#" class = "btn btn-secondary" id = "add5Break"> + </a>
-        </div>
-        <a href = "#" class = "btn btn-secondary" id = "start">Start</a>
-    
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">Pomodoro Timer</h1>
+        <h3 class="mb-5">Lock in!</h3>
         
+        <div class="timer-container mb-4">
+            <div class="timer-section">
+                <div id="timeDiv">
+                    <h2 id="title1">Work Session</h2>
+                    <div class="timer-display">
+                        <h2 id="num" class="display-4 mx-4">25:00</h2>
+                    </div>
+                </div>
+
+                <div id="break">
+                    <h2 id="breakTitle">Break Time</h2>
+                    <div class="timer-display">
+                        <h2 id="breakNum" class="display-4 mx-4">05:00</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-buttons mt-4">
+                <button class="btn btn-lg btn-primary mx-2" id="start" disabled>Start</button>
+                <button class="btn btn-lg btn-warning mx-2" id="reset">Reset</button>
+            </div>
+
+            <div id="workInput" class="timer-input">
+                <label for="workMinutes">Set Work Minutes:</label>
+                <input type="number" id="workMinutes" class="time-input" min="1" max="60" value="25">
+            </div>
+
+            <div id="breakInput" class="timer-input">
+                <label for="breakMinutes">Set Break Minutes:</label>
+                <input type="number" id="breakMinutes" class="time-input" min="1" max="60" value="5">
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
